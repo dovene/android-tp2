@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FirstSteps</string>
+    <string name="connexion">Connexion</string>
+    <string name="login">Login</string>
+    <string name="pass">Password</string>
+    <string name="registration">Inscription</string>
+
+    <string name="register">Inscrire</string>
+</resources>
