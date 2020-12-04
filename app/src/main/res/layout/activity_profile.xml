@@ -9,41 +9,53 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="40dp"
+        android:orientation="vertical"
         android:padding="40dp"
-        android:orientation="vertical">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:layout_marginBottom="8dp"
-            android:textColor="@color/purple_200"
             android:gravity="center"
-            android:text="Bonjour"/>
+            android:text="Bonjour"
+            android:textColor="@color/purple_200"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/login_TV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:layout_marginBottom="8dp"
             android:gravity="center"
-            android:text="@string/connexion"/>
+            android:text="@string/connexion"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profile_IV"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/connexion" />
 
-
-
-
-
-
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logout_BT"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/purple_200"
+            android:layout_marginBottom="8dp"
+            android:text="@string/connexion" />
     </LinearLayout>
 
 

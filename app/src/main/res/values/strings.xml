@@ -4,6 +4,6 @@
     <string name="login">Login</string>
     <string name="pass">Password</string>
     <string name="registration">Inscription</string>
-
+    <string name="logout">Logout</string>
     <string name="register">Inscrire</string>
 </resources>

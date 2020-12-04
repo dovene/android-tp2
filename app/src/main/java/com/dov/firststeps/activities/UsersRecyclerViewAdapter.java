@@ -1,5 +1,6 @@
 package com.dov.firststeps.activities;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +60,14 @@ public class UsersRecyclerViewAdapter extends RecyclerView.Adapter<UsersRecycler
         public void bind(User user) {
             loginTV.setText(user.getLogin());
             nameTV.setText(user.getName());
+            loginTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(loginTV.getContext(), ProfileActivity.class);
+                    intent.putExtra(ProfileActivity.USER_KEY, user);
+                    loginTV.getContext().startActivity(intent);
+                }
+            });
         }
     }
 }
