@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.dov.firststeps.R;
+import com.dov.firststeps.model.User;
 import com.dov.firststeps.repository.UserRepository;
 
 public class UsersActivity extends AppCompatActivity {
@@ -26,7 +27,13 @@ public class UsersActivity extends AppCompatActivity {
     private void setViewItems() {
         recyclerView = findViewById(R.id.user_RV);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        usersRecyclerViewAdapter = new UsersRecyclerViewAdapter(UserRepository.getINSTANCE().getUsers());
+        usersRecyclerViewAdapter = new UsersRecyclerViewAdapter(UserRepository.getINSTANCE().getUsers(), new UsersRecyclerViewAdapter.OnDeleteButtonClicked() {
+            @Override
+            public void delete(User user) {
+                UserRepository.getINSTANCE().getUsers().remove(user);
+                usersRecyclerViewAdapter.setUsers(UserRepository.getINSTANCE().getUsers());
+            }
+        });
         recyclerView.setAdapter(usersRecyclerViewAdapter);
     }
 

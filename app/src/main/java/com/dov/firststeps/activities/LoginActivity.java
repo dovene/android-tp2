@@ -20,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
     AppCompatEditText passET;
     AppCompatButton loginBT;
     AppCompatTextView registrationTV;
-    public static String USER_KEY = "USER_KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +39,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(isUserAlreadyRegistered(loginET.getText().toString(),passET.getText().toString())){
                     Intent intent = new Intent(LoginActivity.this, UsersActivity.class);
-                    //User user = new User(loginET.getText().toString(),passET.getText().toString());
-                    //intent.putExtra(USER_KEY,user);
                     startActivity(intent);
                 } else {
                     Toast.makeText(LoginActivity.this,"Accès refusé",Toast.LENGTH_LONG).show();
